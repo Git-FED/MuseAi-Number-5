@@ -49,6 +49,8 @@ On Windows, replace `./gradlew` with `gradlew.bat`. The APK is a debug artifact,
 
 No genuine app screenshots are available yet because no Android emulator or device was connected for capture. The files under [`promo/`](promo/) are concept illustrations, not app screens, so they are not presented as screenshots.
 
+<img width="1284" height="701" alt="Screenshot 2026-10-26 131618" src="https://github.com/user-attachments/assets/9ef59942-0f41-4d37-b0bb-f160b4fec672" />
+
 ## What works today
 
 - The app shell presents five slot tabs plus a separate Group tab. Slot 1 is labeled **Muse**; slots 2–5 remain unassigned.
