@@ -39,6 +39,13 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
+      - name: Reset Kotlin session directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf -- "$GITHUB_WORKSPACE/.kotlin"
+          mkdir -p "$GITHUB_WORKSPACE/.kotlin/sessions"
+
       - name: Build debug APK
         run: ./gradlew --no-daemon --stacktrace :app:assembleDebug
 
@@ -68,7 +75,7 @@ jobs:
                 -z "$ANDROID_KEY_ALIAS" ||
                 -z "$ANDROID_KEYSTORE_PASSWORD" ||
                 -z "$ANDROID_KEY_PASSWORD" ]]; then
-            echo "::warning::Release requested, but one or more signing secrets are absent; skipping release signing."
+            echo "::warning::Signing secrets are missing; skipping release build."
             exit 0
           fi
 
