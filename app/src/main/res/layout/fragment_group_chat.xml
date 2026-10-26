@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAF0"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/group_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:text="Relay setup pending."
+        android:textColor="#8E371D"
+        android:textSize="14sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/group_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="Group message list" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/group_composer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Relay setup pending"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="3" />
+        <Button
+            android:id="@+id/group_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Send" />
+    </LinearLayout>
+</LinearLayout>

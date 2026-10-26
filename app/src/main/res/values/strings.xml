@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Muse Number Five</string>
+    <string name="slot_unassigned">Unassigned</string>
+    <string name="group_tab">Group</string>
+    <style name="SlotTab">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">#36302C</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>
