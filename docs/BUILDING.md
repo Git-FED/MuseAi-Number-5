@@ -1,10 +1,10 @@
 # Building and signing notes
 
-The debug APK was built successfully with Android SDK Platform 34 and Build-Tools 34.0.0. It uses the standard Android debug key and is not a release artifact. No release-signing setup, release APK, or security proof is supplied.
+The updated source compiled successfully with Android SDK Platform 34 and Build-Tools 34.0.0. The debug lint task completed with 36 non-blocking warnings. The generated APK uses the standard Android debug key and is not a release artifact. No release-signing setup, release APK, or security proof is supplied.
 
 ## Debug build and CI
 
-The debug APK is produced at `app/build/outputs/apk/debug/app-debug.apk` by running `./gradlew assembleDebug` from the repository root. On Windows, use `gradlew.bat assembleDebug`. The current debug artifact was signed with the standard Android debug certificate and its signature was verified. The APK's package metadata and launcher resources were checked. It was not installed on a physical device because no Android device was connected.
+The debug APK is produced at `app/build/outputs/apk/debug/app-debug.apk` by running `./gradlew assembleDebug` from the repository root after configuring Android SDK Platform 34 and Build-Tools 34.0.0. On Windows, use `gradlew.bat assembleDebug`. The generated APK's debug signature and package metadata were verified; package is `com.fedos.musenumberfive.debug`, version code 2, version name `0.2.0-debug`. The updated app has not been installed on a physical device or emulator here.
 
 The GitHub Actions workflow (`.github/workflows/build.yml`) builds debug on pushes and pull requests. CI debug success does not prove release signing, runtime behavior, privacy properties, isolation, or store readiness. Avoid logging secrets and avoid making signing credentials available to pull-request workflows.
 

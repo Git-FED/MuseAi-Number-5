@@ -14,11 +14,11 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:orientation="horizontal">
-            <TextView android:id="@+id/tab_slot_1" style="@style/SlotTab" android:text="Muse" />
-            <TextView android:id="@+id/tab_slot_2" style="@style/SlotTab" android:text="Slot 2" />
-            <TextView android:id="@+id/tab_slot_3" style="@style/SlotTab" android:text="Slot 3" />
-            <TextView android:id="@+id/tab_slot_4" style="@style/SlotTab" android:text="Slot 4" />
-            <TextView android:id="@+id/tab_slot_5" style="@style/SlotTab" android:text="Slot 5" />
+            <TextView android:id="@+id/tab_slot_1" style="@style/SlotTab" android:text="Muse 1" />
+            <TextView android:id="@+id/tab_slot_2" style="@style/SlotTab" android:text="Muse 2" />
+            <TextView android:id="@+id/tab_slot_3" style="@style/SlotTab" android:text="Muse 3" />
+            <TextView android:id="@+id/tab_slot_4" style="@style/SlotTab" android:text="Muse 4" />
+            <TextView android:id="@+id/tab_slot_5" style="@style/SlotTab" android:text="Muse 5" />
             <TextView android:id="@+id/tab_group" style="@style/SlotTab" android:text="Group" />
         </LinearLayout>
     </HorizontalScrollView>

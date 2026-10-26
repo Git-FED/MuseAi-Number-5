@@ -16,13 +16,13 @@ Each item describes a deliverable from the approved plan. Items remain open unti
 - [x] Under `prompts/`, create `BUILD-PROMPT.md`, `ICON-PROMPT.md`, `PAGE-PROMPT.md`, `README-PROMPT.md`, and `PROMO-CODES-PROMPT.md`.
 - [x] Under `testing/`, create `muse-number-five.flow.json`, `muse-number-five-group.flow.json`, and `sample-report.md`. The supplied contract counts these paths as 73 files. Verified all 73 required paths are present; JSON and Android XML parse.
 
-## 2. The Android starter accurately expresses the five-slot plus Group concept
+## 2. The Android app opens five Muse.ai slots plus the separate Group tab
 
-- [x] Define five slots in a single data-first `Slots.kt`; Muse/slot 1 is named, and slots 2–5 remain explicitly unassigned while D1 is open.
-- [x] Provide the named activity, slot manager, profile/vault, tab, message, relay, and Group screen source files with readable responsibilities and the six-tab contract; avoid inventing agent/provider names or tokens.
+- [x] Define five slots in a single data-first `Slots.kt`; all five tabs open `https://muse.ai/` and have stable, separate named WebView profiles as requested by the user.
+- [x] Provide the named activity, slot manager, profile, tab, message, relay, and Group screen source files with readable responsibilities and the six-tab contract; do not claim the profiles are a complete security sandbox.
 - [x] Configure a single declared internet permission, HTTPS-only network policy (`cleartextTrafficPermitted=false`), Android backup exclusions for sensitive slot/relay state, and appropriate Android resources. Clearly document any privacy/isolation behavior that needs device-level verification rather than claiming it is proven.
 - [x] Store only example relay configuration with placeholders. No real API keys, keystores, signing passwords, or credentials are included.
-- [x] Supply Gradle wrapper/build configuration and GitHub Actions debug-build CI with release signing available only by explicit manual setup; signing secrets never enter the repository. Gradle project configuration was checked with `:app:tasks`; the debug APK was built and its signature verified. No Android device was connected, so device runtime testing remains unverified.
+- [x] Supply Gradle wrapper/build configuration and GitHub Actions debug-build CI with release signing available only by explicit manual setup; signing secrets never enter the repository. The updated debug APK builds with SDK 34, its signature and metadata were verified, and lint completes with 36 non-blocking warnings. No Android device was connected, so device runtime testing remains unverified.
 
 ## 3. The static landing page works on GitHub Pages and Cloudflare Pages/Workers
 
@@ -39,7 +39,7 @@ Each item describes a deliverable from the approved plan. Items remain open unti
 
 ## 5. The documentation, prompts, and testing examples are usable and candid
 
-- [x] `docs/ultimate-file-tree.md` records the repository layout; `DECISIONS.md` lists D1–D13 and keeps D1 OPEN; `SLOTS.md` mirrors the canonical slot data; `BUILDING.md` describes debug/CI/release signing; `TESTING.md` documents the test approach and isolation proof; and `GROUP-CHAT.md` explains setup, usage, limits, and manual sending checks.
+- [x] `docs/ultimate-file-tree.md` records the repository layout; `DECISIONS.md` lists D1–D13 and records the requested five-Muse.ai lineup; `SLOTS.md` mirrors the canonical slot data; `BUILDING.md` describes debug/CI/release signing; `TESTING.md` documents the test approach and profile limits; and `GROUP-CHAT.md` explains setup, usage, limits, and manual sending checks.
 - [x] The five prompt files cover repository build order, icon/art direction, standalone landing page, README authoring (including an explicit placeholder where Git-FED’s verbatim copy was not supplied), and the three draft promo codes `Muse 5F2V31`, `Manus G3ADN`, and `Teamily 2U6Q8D`, without inventing discounts or availability.
 - [x] The two JSON flows are machine-readable sample/manual scenarios; the Group flow is read-only and never sends a message. `sample-report.md` is clearly marked SAMPLE and NOT a real test run.
 

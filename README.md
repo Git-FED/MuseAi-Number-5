@@ -1,20 +1,14 @@
 # MuseAi-Number-5
 
-<img width="1280" height="696" alt="Screenshot 2026-10-26 124932" src="https://github.com/user-attachments/assets/c40ca90f-4987-41e2-9de6-51cc7ee30eea" />
+An Android/Kotlin app with five numbered Muse.ai WebView tabs and a separate Group tab. Each tab opens `https://muse.ai/` in a distinct named WebView profile.
 
-An Android/Kotlin starter app with five numbered WebView slots and a separate Group tab—currently local placeholders, not connected AI agents.
-
-**Status:** Debug build checked locally · No release APK · No verified live demo URL · D1 still open
-
-<img width="1282" height="700" alt="Screenshot 2026-10-23 112703" src="https://github.com/user-attachments/assets/e120250b-f41c-4317-b22b-5c89356c9f04" />
+**Status:** Muse.ai destinations configured · Device/runtime verification pending · No release APK
 
 ## Why this exists
 
-If you use several browser-based AI assistants, it is easy to lose track of which workspace you are in. MuseAi-Number-5 explores a single Android shell with five visible slots and a sixth tab for Group.
+If you use several Muse.ai sessions, it is easy to lose track of which workspace you are in. MuseAi-Number-5 provides five visible tabs, each loading the same Muse.ai starting URL with a stable, separate WebView profile, plus a sixth tab for Group. Sign in to the desired account independently in each tab. Separate WebView profiles keep browser data such as cookies and web storage apart where supported, but they are not a full security sandbox.
 
-The project is intentionally candid about what is missing. Muse is the only named slot. Slots 2–5 are unassigned. The app opens a local placeholder in each slot; it does not connect to AI providers. Group is a disconnected UI scaffold, and sending is disabled. Separate tabs are not proof of secure storage isolation.
-
-<img width="1279" height="703" alt="Screenshot 2026-10-26 124950" src="https://github.com/user-attachments/assets/419969a3-e876-4e23-9c1b-302a28ed8080" />
+Group remains a disconnected UI scaffold, and sending is disabled. The Muse.ai pages require internet access and an Android System WebView provider that supports AndroidX WebKit multi-profile; on unsupported devices, the app displays an update message rather than silently sharing one profile.
 
 ## See it work
 
@@ -22,13 +16,11 @@ The project is intentionally candid about what is missing. Muse is the only name
 
 **Demo GIF/video:** Unavailable. No Android emulator or device was connected for a real app recording.
 
-The fastest real trial is to build and install the debug app on an Android device or emulator. It opens the local tab shell described above. See the [slot placeholder used by the app](app/src/main/assets/slot-placeholder.html) and the [sample manual walkthrough](testing/muse-number-five.flow.json); that walkthrough is marked **NOT RUN** and D11 remains an open release gate.
-
-<img width="1285" height="697" alt="Screenshot 2026-10-26 125014" src="https://github.com/user-attachments/assets/2211e512-e220-431a-9590-b18148eda55d" />
+The fastest real trial is to build and install the debug app on a connected Android device or emulator with a current Android System WebView and internet access. The five tabs are configured to open Muse.ai; real-device loading, sign-in, and per-profile behavior still need testing. The [manual walkthrough](testing/muse-number-five.flow.json) remains marked **NOT RUN** and the D11 release gate remains open.
 
 ## Quick start
 
-You need JDK 17 or newer, Android SDK Platform 34, Android Build-Tools 34.0.0, and an Android device or emulator with USB debugging enabled. The Gradle wrapper downloads Gradle 8.7 if needed.
+You need JDK 17 or newer, Android SDK Platform 34, Android Build-Tools 34.0.0, and an Android device or emulator with USB debugging enabled. Update Android System WebView (or Chrome where it provides WebView) to a version supporting multi-profile WebViews. The Gradle wrapper downloads Gradle 8.7 if needed.
 
 ```sh
 # Build the debug APK
@@ -43,21 +35,17 @@ adb shell monkey -p com.fedos.musenumberfive.debug 1
 
 On Windows, replace `./gradlew` with `gradlew.bat`. The APK is a debug artifact, not a release build. No Android unit or instrumentation test suite is included yet. The JSON files under [`testing/`](testing/) are proposed manual scenarios, not executable test evidence; the Group scenario is read-only and never sends a message.
 
-<img width="1283" height="698" alt="Screenshot 2026-10-26 125004" src="https://github.com/user-attachments/assets/83432f64-1978-4dd5-a8ab-c5720e9d670e" />
-
 ## Screenshots
 
 No genuine app screenshots are available yet because no Android emulator or device was connected for capture. The files under [`promo/`](promo/) are concept illustrations, not app screens, so they are not presented as screenshots.
 
-<img width="1284" height="701" alt="Screenshot 2026-10-26 131618" src="https://github.com/user-attachments/assets/9ef59942-0f41-4d37-b0bb-f160b4fec672" />
-
 ## What works today
 
-- The app shell presents five slot tabs plus a separate Group tab. Slot 1 is labeled **Muse**; slots 2–5 remain unassigned.
-- Each slot opens a bundled local HTML placeholder. The WebView disables JavaScript and DOM storage. Its navigation policy keeps HTTPS navigation in that WebView and blocks other URL schemes; no remote destination is configured in the shipped starter.
+- The app shell presents five tabs labeled **Muse 1** through **Muse 5**, plus a separate Group tab. Each Muse tab opens `https://muse.ai/` in its own stable named WebView profile.
+- Muse WebViews enable JavaScript and DOM storage, allow HTTPS navigation in the same slot, and block other URL schemes. If the installed Android System WebView lacks multi-profile support, the slot shows an update message rather than sharing the default profile.
 - Group displays a not-connected scaffold. The relay client is deliberately unconfigured, so it does not fetch or send messages.
 
-The debug build and launcher resources were checked, but the app was not installed or exercised on a device here. Storage separation, lifecycle behavior, and real-device navigation still need the documented tests. Read [`docs/TESTING.md`](docs/TESTING.md) before treating any of those behaviors as verified.
+The updated debug APK builds with Android SDK Platform 34, and the Android lint task completes with non-blocking warnings. The app has not been installed or exercised on a device here. Storage separation, lifecycle behavior, and real-device navigation still need the documented tests. Read [`docs/TESTING.md`](docs/TESTING.md) before treating any of those behaviors as verified.
 
 ## Build the static project site
 
@@ -95,7 +83,7 @@ Redeem my code in Settings - Credits Center and you'll get 5 CREDITS right away.
 
 ## Repository map
 
-- `app/` — Android app source, resources, and local placeholder page.
+- `app/` — Android app source, resources, and Muse.ai WebView integration.
 - `assets/` and `promo/` — editable icon/preview artwork and eight separate concept illustrations.
 - `docs/` — slot decisions, build and release notes, testing, Group limits, and deployment.
 - `prompts/` — the supplied authoring prompts.

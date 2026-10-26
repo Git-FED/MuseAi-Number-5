@@ -48,10 +48,10 @@ class MainActivity : AppCompatActivity() {
             tab.isSelected = selected
             tab.setTextColor(if (selected) Color.WHITE else Color.rgb(54, 48, 44))
             tab.setBackgroundColor(if (selected) Color.rgb(168, 64, 32) else Color.rgb(255, 250, 240))
-            tab.contentDescription = when (tabIndex) {
-                0 -> "Slot 1, Muse" + if (selected) ", selected" else ""
-                5 -> "Group tab" + if (selected) ", selected" else ""
-                else -> "Slot ${tabIndex + 1}, unassigned" + if (selected) ", selected" else ""
+            tab.contentDescription = if (tabIndex < Slots.all.size) {
+                Slots.all[tabIndex].label + if (selected) ", selected" else ""
+            } else {
+                "Group tab" + if (selected) ", selected" else ""
             }
         }
 
