@@ -1,0 +1,44 @@
+{
+  "name": "Muse Number Five — five-slot manual scenario",
+  "status": "SAMPLE_MANUAL_SCENARIO_NOT_RUN",
+  "purpose": "Proposed manual coverage for the five agent slots and six-tab shell. This JSON records no execution result.",
+  "release_gate": {
+    "decision": "D11",
+    "status": "OPEN_PENDING_OWNER_CRITERIA_AND_EVIDENCE",
+    "note": "The source describes this 22-step slot flow as a release gate. Detailed D11 acceptance criteria were not supplied. Do not mark passed until the owner supplies criteria and a real run records evidence."
+  },
+  "preconditions": [
+    "Use a non-production test build and test data.",
+    "Do not enter real credentials or claim security isolation based on UI separation.",
+    "Slots 2–5 must appear unassigned unless D1 has subsequently been approved; do not invent names or providers."
+  ],
+  "steps": [
+    {"id": 1, "action": "Install/open the test build.", "expected": "App launches without asserting release readiness."},
+    {"id": 2, "action": "Inspect primary navigation.", "expected": "Five numbered slot tabs and one separate Group tab are presented."},
+    {"id": 3, "action": "Inspect slot 1 label.", "expected": "Slot 1 is labeled Muse."},
+    {"id": 4, "action": "Inspect slot 2 label/details.", "expected": "Slot 2 is unassigned; no provider is invented."},
+    {"id": 5, "action": "Inspect slot 3 label/details.", "expected": "Slot 3 is unassigned; no provider is invented."},
+    {"id": 6, "action": "Inspect slot 4 label/details.", "expected": "Slot 4 is unassigned; no provider is invented."},
+    {"id": 7, "action": "Inspect slot 5 label/details.", "expected": "Slot 5 is unassigned; no provider is invented."},
+    {"id": 8, "action": "Select slot 1.", "expected": "Slot 1 content area is selected and identified as Muse."},
+    {"id": 9, "action": "Navigate from slot 1 to slot 2 and back.", "expected": "Selection changes predictably; no cross-slot security conclusion is inferred."},
+    {"id": 10, "action": "Select slot 3.", "expected": "Slot 3 remains visibly unassigned under open D1."},
+    {"id": 11, "action": "Select slot 4.", "expected": "Slot 4 remains visibly unassigned under open D1."},
+    {"id": 12, "action": "Select slot 5.", "expected": "Slot 5 remains visibly unassigned under open D1."},
+    {"id": 13, "action": "Inspect Group tab position.", "expected": "Group is a sixth tab, separate from the five slots."},
+    {"id": 14, "action": "Inspect Group label and semantic glyph.", "expected": "Label reads Group and glyph communicates group/chat; exact artwork may vary."},
+    {"id": 15, "action": "Inspect Group page index contract.", "expected": "Group corresponds to zero-based page index 5."},
+    {"id": 16, "action": "Open Group without relay configuration.", "expected": "A clear not-connected state appears; no send action is available."},
+    {"id": 17, "action": "Revisit each slot after navigation.", "expected": "Displayed selection/content labels remain consistent with their slot; record any observed state bleed."},
+    {"id": 18, "action": "Exercise permitted lifecycle/navigation transitions in the test build.", "expected": "No crash or misleading identity; this does not prove secure data isolation."},
+    {"id": 19, "action": "Review accessible labels/focus across tabs.", "expected": "Controls have understandable labels and focus behavior; record findings."},
+    {"id": 20, "action": "Review storage, backup, and network behavior against implementation.", "expected": "Capture observations for separate security review; do not treat this checklist as certification."},
+    {"id": 21, "action": "Capture actual build/device/version, results, logs, and defects for a real run.", "expected": "Evidence is attributable to the exact tested artifact and environment."},
+    {"id": 22, "action": "Ask the source owner to supply D11 criteria and assess all required evidence.", "expected": "Release gate remains blocked unless approved D11 requirements are met and documented."}
+  ],
+  "execution": {
+    "executed": false,
+    "result": "NOT_RUN",
+    "evidence": []
+  }
+}

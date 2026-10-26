@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Muse five-stripe favicon">
+  <rect width="64" height="64" rx="14" fill="#0B0B10"/>
+  <g stroke-linecap="round" stroke-width="5">
+    <path stroke="#FF6B35" d="M13 16v32"/>
+    <path stroke="#F5EBDD" d="M23 16v32"/>
+    <path stroke="#F5EBDD" d="M32 16v32"/>
+    <path stroke="#F5EBDD" d="M41 16v32"/>
+    <path stroke="#F5EBDD" d="M51 16v32"/>
+  </g>
+</svg>

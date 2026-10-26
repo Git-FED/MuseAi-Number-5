@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Muse five-stripe mark</title>
+  <rect width="512" height="512" rx="116" fill="#0B0B10"/>
+  <g transform="translate(92 126)" fill="none" stroke-linecap="round" stroke-width="34">
+    <path stroke="#FF6B35" d="M0 0v260"/>
+    <path stroke="#F5EBDD" d="M82 0v260"/>
+    <path stroke="#F5EBDD" d="M164 0v260"/>
+    <path stroke="#F5EBDD" d="M246 0v260"/>
+    <path stroke="#F5EBDD" d="M328 0v260"/>
+  </g>
+</svg>

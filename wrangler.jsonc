@@ -1,0 +1,11 @@
+{
+  "name": "museai-number-five",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-25",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "404-page"
+  }
+}

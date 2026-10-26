@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b10">
+  <meta name="description" content="MuseAi Number 5 is a prerelease Android shell for five AI-agent slots and a sixth Group tab. Slots 2–5 are still undecided.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MuseAi Number 5 — Five slots, one mildly overstaffed phone">
+  <meta property="og:description" content="A five-slot Android concept with a sixth Group tab. The lineup is still being decided.">
+  <!-- Replace this example host with the deployed site's canonical URL before release. -->
+  <meta property="og:image" content="https://example.com/assets/og-image.png">
+  <meta property="og:image:alt" content="Five tiny desk robots fan out from one phone in a hand-drawn comic illustration.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>MuseAi Number 5 — Five slots, one mildly overstaffed phone</title>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="MuseAi Number 5 home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Muse<span class="brand-number">#5</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Toggle navigation</span><span aria-hidden="true">Menu</span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#slots">The slots</a>
+      <a href="#group">Group tab</a>
+      <a href="#community">Community</a>
+      <a href="#postcards">Promo desk</a>
+      <a href="#hosting">Build & hosting</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Android concept · prerelease scaffold</p>
+        <h1 id="hero-title">Five slots.<br><span>One mildly overstaffed phone.</span></h1>
+        <p class="hero-lede">MuseAi-Number-5 is a little Android shell for keeping five AI-agent browser spaces distinct, with a Group tab sitting politely to the side.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#slots">Meet the slots <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/Git-FED/MuseAi-Number-5" target="_blank" rel="noreferrer">Repository address from the brief <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="quiet-note">No release APK or live deployment is included. The robot is not a security auditor.</p>
+      </div>
+      <figure class="hero-art">
+        <span class="art-stamp">A concept<br>with 5 tabs</span>
+        <img src="./promo/01-five-in-one.png" alt="A phone with five tiny desk-robot helpers fanning out from its screen." width="1200" height="800">
+        <figcaption>One device, five workspaces. The tiny staff meeting remains optional.</figcaption>
+      </figure>
+      <div class="hero-ruler" aria-hidden="true"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span></div>
+    </section>
+
+    <section class="slots-section section-wrap" id="slots" aria-labelledby="slots-title">
+      <div class="section-heading">
+        <p class="eyebrow">The proposed lineup</p>
+        <h2 id="slots-title">Five seats. One name tag.</h2>
+        <p>Muse is slot one. Slots two through five are still blank, because pretending the decision is done would be a weird way to start.</p>
+      </div>
+      <div class="slot-rail" aria-label="Five planned agent slots">
+        <div class="slot-card slot-muse"><span class="slot-index">01</span><strong>Muse</strong><span class="slot-caption">Named</span></div>
+        <div class="slot-card slot-unknown"><span class="slot-index">02</span><strong aria-label="Unassigned">?</strong><span class="slot-caption">Open</span></div>
+        <div class="slot-card slot-unknown"><span class="slot-index">03</span><strong aria-label="Unassigned">?</strong><span class="slot-caption">Open</span></div>
+        <div class="slot-card slot-unknown"><span class="slot-index">04</span><strong aria-label="Unassigned">?</strong><span class="slot-caption">Open</span></div>
+        <div class="slot-card slot-unknown"><span class="slot-index">05</span><strong aria-label="Unassigned">?</strong><span class="slot-caption">Open</span></div>
+      </div>
+      <div class="decision-note"><span class="decision-badge">D1 · OPEN</span><p>Names and providers for slots 2–5 have not been supplied. The numbered slots are a product plan, not a claim that five agents are already configured.</p></div>
+      <div class="feature-pair">
+        <figure class="promo-figure promo-offset">
+          <img src="./promo/02-top-5-agents.png" alt="A magnified row of five app tabs: Muse is named and the other four show question marks." loading="lazy" width="1200" height="800">
+          <figcaption>The lineup currently has four question marks and a surprisingly confident first tab.</figcaption>
+        </figure>
+        <div class="feature-copy">
+          <p class="eyebrow">Switching, minus a ceremony</p>
+          <h3>Pick a tab.<br>Let the little door open.</h3>
+          <p>The intended flow keeps five named places in one Android shell. The app sources are a starter implementation; lifecycle, persistence, and isolation still need their documented device tests.</p>
+          <figure class="promo-figure narrow-figure">
+            <img src="./promo/03-perfectly-simple.png" alt="A round robot taps one large orange button beside a phone." loading="lazy" width="1200" height="800">
+            <figcaption>One tap, ideally. The actual tap choreography still belongs in testing.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="awake-band" aria-labelledby="awake-title">
+      <div class="section-wrap awake-layout">
+        <div>
+          <p class="eyebrow">The aspiration board</p>
+          <h2 id="awake-title">All five awake.<br>None asking for a fresh cup of context.</h2>
+          <p>This is the concept, not a measured performance guarantee. The app has to prove how it retains or restores each workspace before that line graduates from joke to promise.</p>
+        </div>
+        <figure class="promo-figure awake-art">
+          <img src="./promo/04-always-active.png" alt="Five tiny office robots try to look awake at separate desks around a phone." loading="lazy" width="1200" height="800">
+          <figcaption>Five desks. One suspiciously tiny coffee budget.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="boundary-section section-wrap" aria-labelledby="boundary-title">
+      <div class="boundary-intro">
+        <p class="eyebrow">A promise that needs proof</p>
+        <h2 id="boundary-title">Separate worlds.<br>Not just different hats.</h2>
+        <p>Per-slot storage separation is a core requirement, not something to infer from the art. Cookie, local-storage, cache, process, backup, and reset behavior must be validated on supported Android versions.</p>
+      </div>
+      <div class="boundary-artwork">
+        <figure class="promo-figure">
+          <img src="./promo/05-no-contamination.png" alt="Five separate vault doors and a divider keep one curious robot's cookie from crossing between them." loading="lazy" width="1200" height="800">
+          <figcaption>Concept art about boundaries. Not an audit report.</figcaption>
+        </figure>
+        <figure class="promo-figure world-art">
+          <img src="./promo/06-separate-worlds.png" alt="One phone with five small separate illustrated worlds around it." loading="lazy" width="1200" height="800">
+          <figcaption>Five worlds, one handset, and a lot of tiny office furniture.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="group-section" id="group" aria-labelledby="group-title">
+      <div class="section-wrap group-layout">
+        <div class="group-copy">
+          <p class="eyebrow">Tab six · Group</p>
+          <h2 id="group-title">A shared room with the send button still in your hands.</h2>
+          <p>The planned Group screen is expected to show relay messages, an explicit not-connected state, and poll every 60 seconds only when a real relay is configured. The included Android screen is a placeholder and sends nothing. The sample Group flow is read-only and never sends.</p>
+          <ul class="feature-list">
+            <li>Sixth tab, page index 5</li>
+            <li>Example relay config contains placeholders only</li>
+            <li>No relay host or token is bundled</li>
+          </ul>
+        </div>
+        <figure class="promo-figure mascot-figure">
+          <img src="./promo/08-muse-5-mascot.png" alt="A small cream-colored robot proudly presents an iridescent number-five badge." loading="lazy" width="1200" height="800">
+          <figcaption>Muse #5, taking its badge presentation extremely seriously.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="community-section" id="community" aria-labelledby="community-title">
+      <div class="section-wrap">
+        <div class="community-heading">
+          <p class="eyebrow">FED-OS community & support</p>
+          <h2 id="community-title">The robots have a meeting room.</h2>
+          <p>Join the public developer server, or support the work through the links below. Membership and paid offerings remain on their respective platforms.</p>
+        </div>
+        <div class="community-layout">
+          <div class="discord-panel">
+            <div class="community-card-heading">
+              <div><p class="eyebrow">Public community · Discord</p><h3>FED-OS developers</h3></div>
+              <a class="text-link" href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer">Open invite <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="discord-frame-wrap">
+              <iframe src="https://discord.com/widget?id=1400235929154879490&amp;theme=dark" title="FED-OS community Discord server" width="350" height="500" allowtransparency="true" frameborder="0" loading="lazy" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+          </div>
+          <aside class="support-card" aria-label="Support FED-OS">
+            <p class="eyebrow">Support & media</p>
+            <h3>Keep the tiny office lights on.</h3>
+            <p>Optional support links go to FED-OS’s public pages. Any membership benefits or payment choices are handled by Patreon.</p>
+            <a class="button button-dark" href="https://www.patreon.com/checkout/16145898/28759937?client_id=yieuxJary8ZL-f8_KU2x6CLgr8nrI8W61ttU1yzFIpPl4KhhtqsjGDWTKdh0e-gx&amp;state=05d4a8d93af762ab4aa99e75678389c6&amp;response_type=code&amp;amt=5.0&amp;pledge_insufficient=True&amp;redirect_uri=https%3A%2F%2Fwww.patreon.com%2Foauth2%2Fbecome-patron%3Fredirect_uri%3Dhttps%253A%252F%252Fgithub.com%252Fsponsors%252Faccounts%252Fpatreon%26client_id%3DyieuxJary8ZL-f8_KU2x6CLgr8nrI8W61ttU1yzFIpPl4KhhtqsjGDWTKdh0e-gx%26min_cents%3D500%26campaign_id%3D16145898%26response_type%3Dcode%26state%3D05d4a8d93af762ab4aa99e75678389c6%26scope%3Didentity%2Bidentity%255Bemail%255D%2Bcampaigns%2Bw%253Acampaigns.webhook%2Bcampaigns.members&amp;start_flow=become_patron&amp;scope=identity+identity%5Bemail%5D+campaigns+w%3Acampaigns.webhook+campaigns.members" target="_blank" rel="noopener noreferrer">Support with $5 on Patreon <span aria-hidden="true">↗</span></a>
+            <p class="checkout-note">If this direct checkout link expires or will not open, use the public Patreon page below.</p>
+            <p class="support-alternatives">Or visit <a href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener noreferrer">Patreon</a> or <a href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="construction-section section-wrap" aria-labelledby="construction-title">
+      <figure class="promo-figure construction-art">
+        <img src="./promo/07-under-construction.png" alt="A round robot studies an upside-down blueprint behind a small orange construction barrier." loading="lazy" width="1200" height="800">
+        <figcaption>The lineup is under construction. The clipboard was also printed upside down.</figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">Current status</p>
+        <h2 id="construction-title">Some choices are still wearing hard hats.</h2>
+        <p>D1 is open. Other decisions that were not included in the supplied source remain unspecified until the project owner provides them. This package includes examples and implementation scaffolding, not a finished Play Store release.</p>
+        <a class="text-link" href="./docs/DECISIONS.md">Read the decision log <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="hosting-section" id="hosting" aria-labelledby="hosting-title">
+      <div class="section-wrap hosting-layout">
+        <div>
+          <p class="eyebrow">Same repo, two static hosts</p>
+          <h2 id="hosting-title">Git for the source.<br>Pick your front door.</h2>
+          <p>The site builder copies only public web files into <code>dist/</code>, so Android source does not become part of the website. GitHub Pages deploys from the included Actions workflow. Cloudflare Pages can build from GitHub, or the same output can be sent to Cloudflare Pages Direct Upload or a Workers static-assets deployment.</p>
+        </div>
+        <div class="host-note">
+          <span class="host-numeral">?</span>
+          <p><strong>One canonical host, please.</strong><br>The project configures options; it does not connect accounts, buy a domain, or publish anything for you.</p>
+          <a class="button button-light" href="./docs/DEPLOYMENT.md">Open deployment notes <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section section-wrap" id="postcards" aria-labelledby="postcards-title">
+      <div class="closing-heading">
+        <p class="eyebrow">Promo desk · concept art</p>
+        <h2 id="postcards-title">Eight tiny posters.<br>Zero tiny legal claims.</h2>
+        <p>The captions carry the copy; the drawings get to be drawings. These are illustrations, not evidence that every proposed feature is shipped.</p>
+      </div>
+      <div class="postcard-strip">
+        <figure class="promo-figure"><img src="./promo/01-five-in-one.png" alt="Five robot helpers fan out from one phone." loading="lazy" width="1200" height="800"><figcaption>01 · A small team meeting</figcaption></figure>
+        <figure class="promo-figure"><img src="./promo/02-top-5-agents.png" alt="Muse and four unassigned tab tiles." loading="lazy" width="1200" height="800"><figcaption>02 · The open seating chart</figcaption></figure>
+        <figure class="promo-figure"><img src="./promo/03-perfectly-simple.png" alt="A robot makes a one-button switch." loading="lazy" width="1200" height="800"><figcaption>03 · The easy button</figcaption></figure>
+        <figure class="promo-figure"><img src="./promo/04-always-active.png" alt="Five tired robots at separate desks." loading="lazy" width="1200" height="800"><figcaption>04 · The uptime daydream</figcaption></figure>
+        <figure class="promo-figure"><img src="./promo/05-no-contamination.png" alt="Five vault doors with a divider between them." loading="lazy" width="1200" height="800"><figcaption>05 · The cookie boundary</figcaption></figure>
+        <figure class="promo-figure"><img src="./promo/06-separate-worlds.png" alt="A phone surrounded by five mini worlds." loading="lazy" width="1200" height="800"><figcaption>06 · Five little worlds</figcaption></figure>
+        <figure class="promo-figure"><img src="./promo/07-under-construction.png" alt="A robot with an upside-down blueprint behind a barrier." loading="lazy" width="1200" height="800"><figcaption>07 · Pending decisions</figcaption></figure>
+        <figure class="promo-figure"><img src="./promo/08-muse-5-mascot.png" alt="The Muse mascot shows off a number-five badge." loading="lazy" width="1200" height="800"><figcaption>08 · Badge ceremony</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner">
+      <div class="footer-top">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>Muse<span class="brand-number">#5</span></span></a>
+        <p>Built as a starter repo. Still checking that the little doors really stay separate.</p>
+      </div>
+      <div class="footer-grid">
+        <section class="footer-column" aria-labelledby="footer-explore"><h2 id="footer-explore">Explore</h2><ul>
+          <li><a href="https://www.fedpromptly.org" target="_blank" rel="noopener noreferrer">FED-OS ecosystem</a></li>
+          <li><a href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener noreferrer">Join FED-OS membership</a></li>
+          <li><a href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener noreferrer">Storefront</a></li>
+          <li><a href="https://whop.com/fedpromptly/" target="_blank" rel="noopener noreferrer">Whop · paid products</a></li>
+        </ul></section>
+        <section class="footer-column" aria-labelledby="footer-contact"><h2 id="footer-contact">Contact</h2><ul>
+          <li><a href="mailto:contact@fedpromptly.com">General · contact@fedpromptly.com</a></li>
+          <li><a href="mailto:support@fedpromptly.com">Support · support@fedpromptly.com</a></li>
+          <li><a href="mailto:business@fedpromptly.com">Business · business@fedpromptly.com</a></li>
+        </ul></section>
+        <section class="footer-column" aria-labelledby="footer-media"><h2 id="footer-media">Support & media</h2><ul>
+          <li><a href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener noreferrer">Patreon supporters</a></li>
+          <li><a href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener noreferrer">Tips · Buy Me a Coffee</a></li>
+          <li><a href="https://substack.com/@fedpromptly" target="_blank" rel="noopener noreferrer">Articles</a></li>
+          <li><a href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener noreferrer">FEDpromptly blog</a></li>
+          <li><a href="https://gitfed.substack.com/" target="_blank" rel="noopener noreferrer">GitFed blog</a></li>
+          <li><a href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener noreferrer">Artwork</a></li>
+        </ul></section>
+        <section class="footer-column" aria-labelledby="footer-community"><h2 id="footer-community">Community & social</h2><ul>
+          <li><a href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer">Developers · Discord</a></li>
+          <li><a href="https://bsky.app/profile/fed-os.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+          <li><a href="https://x.com/Fedpromptly" target="_blank" rel="noopener noreferrer">X · advertising</a></li>
+          <li><a href="./private-communities.html">Private Communities · 18+ gate</a></li>
+        </ul></section>
+      </div>
+      <nav class="footer-bottom" aria-label="Project links"><a href="./README.md">README</a><a href="./docs/TESTING.md">Testing notes</a><a href="./docs/DEPLOYMENT.md">Deploy</a></nav>
+    </div>
+  </footer>
+</body>
+</html>

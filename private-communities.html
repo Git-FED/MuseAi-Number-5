@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111416">
+  <meta name="description" content="A self-attested 18+ and country-eligibility courtesy gate for the FED-OS private Matrix community link.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+  <title>Private Communities · FED-OS</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="MuseAi Number 5 home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Muse<span class="brand-number">#5</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Toggle navigation</span><span aria-hidden="true">Menu</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="./index.html">Home</a><a href="./index.html#community">Community</a></nav>
+  </header>
+  <main id="main" class="private-page section-wrap" aria-labelledby="private-title">
+    <p class="eyebrow">Private communities · access check</p>
+    <h1 id="private-title">Pause before you step through.</h1>
+    <p class="private-lede">The FED-OS Matrix room is described as 18+ and available only to residents of Canada, Switzerland, Russia, Iran, Somalia, and Turkmenistan. Please read that restriction before continuing.</p>
+    <div class="private-warning" role="note">
+      <strong>Important limitation</strong>
+      <p>This is a static, client-side courtesy gate. It asks you to self-attest, but it does not verify your age, identity, or actual country of residence. The link can be discovered or this check can be bypassed. It is not legal, geographic, or server-side access control; follow the community's current rules and platform terms.</p>
+    </div>
+    <form class="gate-form" id="community-gate">
+      <label for="eligible-country">Country of residence (self-reported)</label>
+      <select id="eligible-country" name="country" required>
+        <option value="">Select an eligible country</option>
+        <option value="Canada">Canada</option>
+        <option value="Switzerland">Switzerland</option>
+        <option value="Russia">Russia</option>
+        <option value="Iran">Iran</option>
+        <option value="Somalia">Somalia</option>
+        <option value="Turkmenistan">Turkmenistan</option>
+      </select>
+      <label class="gate-checkbox" for="age-confirm"><input id="age-confirm" name="age-confirm" type="checkbox" required> I confirm that I am 18 years of age or older.</label>
+      <button class="button button-dark" type="submit">Continue to the community check <span aria-hidden="true">→</span></button>
+      <p class="gate-status" id="gate-status" aria-live="polite">Choose your country and confirm you are 18+ to continue.</p>
+    </form>
+    <section class="matrix-result" id="matrix-result" hidden aria-labelledby="matrix-result-title">
+      <h2 id="matrix-result-title">Self-attestation recorded for this page view.</h2>
+      <p>Continue only if the community's current rules and your local requirements allow it.</p>
+      <a class="button button-light" id="matrix-link" target="_blank" rel="noopener noreferrer">Open the Matrix room <span aria-hidden="true">↗</span></a>
+    </section>
+    <p class="private-back"><a class="text-link" href="./index.html">← Back to MuseAi Number 5</a></p>
+  </main>
+  <footer class="site-footer"><div class="section-wrap footer-inner"><p>Private community links are not listed directly in the public footer.</p><nav aria-label="Project links"><a href="./index.html">Home</a><a href="./docs/DEPLOYMENT.md">Deployment</a></nav></div></footer>
+</body>
+</html>

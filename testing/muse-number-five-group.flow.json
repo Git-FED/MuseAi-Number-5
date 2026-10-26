@@ -1,0 +1,42 @@
+{
+  "name": "Muse Number Five — Group read-only manual scenario",
+  "status": "SAMPLE_MANUAL_SCENARIO_NOT_RUN",
+  "read_only": true,
+  "never_send": true,
+  "prohibited_actions": [
+    "Send or post a message",
+    "Invoke any write, publish, submit, or outbound-message endpoint",
+    "Use real relay credentials in this fixture"
+  ],
+  "contract": {
+    "tab_label": "Group",
+    "tab_glyph": "group/chat semantic glyph",
+    "zero_based_page_index": 5,
+    "group_is_sixth_tab_not_slot_six": true,
+    "poll_interval_seconds_when_configured": 60,
+    "not_connected_state_required": true
+  },
+  "fixture_config": {
+    "relay_url": "https://REPLACE-WITH-APPROVED-RELAY.example.invalid/read-only",
+    "access_token": "PLACEHOLDER_NOT_A_SECRET",
+    "poll_interval_seconds": 60,
+    "mode": "read_only"
+  },
+  "steps": [
+    {"id": 1, "action": "Open the Group tab with no relay configuration.", "expected": "Group shows a clear not-connected state."},
+    {"id": 2, "action": "Inspect available controls in the not-connected state.", "expected": "No send/post control or write action is available."},
+    {"id": 3, "action": "Use only the placeholder fixture configuration in a test harness, not a real secret.", "expected": "The endpoint remains visibly illustrative and does not accidentally connect."},
+    {"id": 4, "action": "If an owner-approved controlled read-only source is later provided, configure it outside this fixture.", "expected": "No real endpoint or credential is added to source control."},
+    {"id": 5, "action": "Observe scheduled polling in that approved test environment.", "expected": "Polling interval is 60 seconds when configured."},
+    {"id": 6, "action": "Inspect rendering of received read-only fixture messages.", "expected": "Received content can be displayed without any outbound request."},
+    {"id": 7, "action": "Simulate source unavailability in the read-only test harness.", "expected": "The UI reports disconnected/stale/error state truthfully."},
+    {"id": 8, "action": "Inspect request logs or harness instrumentation.", "expected": "Only reads occur; no send/post/write request is issued."},
+    {"id": 9, "action": "Stop the scenario without composing or transmitting a message.", "expected": "Scenario ends read-only; no message has been sent."}
+  ],
+  "execution": {
+    "executed": false,
+    "result": "NOT_RUN",
+    "messages_sent": 0,
+    "evidence": []
+  }
+}

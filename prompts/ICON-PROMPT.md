@@ -1,0 +1,5 @@
+# Icon and artwork prompt
+
+Create a compact, legible icon for **Muse Number Five**, an Android concept organized around five separate AI-agent slots plus a sixth Group tab. Use a contemporary editorial-comic / workplace-zine look: warm paper, near-black ink, chunky slightly imperfect outlines, restrained halftone, and a distinctive orange accent (`#FF6B35`). Favor a simple five-stripe mark: one orange stripe for Muse/slot 1 and four neutral stripes for still-unassigned slots 2–5. The mark should remain clear at launcher-icon size and work in a square/squircle crop and as editable SVG source.
+
+Do not assign names, provider identities, or provider logos to slots 2–5. Do not imply that Group is a sixth agent. Avoid tiny text, fake UI details, claims of security/isolation as fact, or typography that would become garbled. If a mascot is requested, keep it generic and consistent with the hand-inked visual system; do not represent an unverified implementation feature. Deliver source artwork separately from raster exports and check contrast/silhouette at small sizes.
