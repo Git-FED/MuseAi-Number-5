@@ -1,0 +1,73 @@
+name: Android build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      build_release:
+        description: Build a release APK if signing secrets are configured
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android 34 SDK packages
+        run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+
+      - name: Build debug APK
+        run: ./gradlew --no-daemon :app:assembleDebug
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: muse-number-five-debug
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Build signed release APK (manual dispatch only)
+        if: github.event_name == 'workflow_dispatch' && inputs.build_release == true
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$ANDROID_KEYSTORE_BASE64" || -z "$ANDROID_KEY_ALIAS" || -z "$ANDROID_KEYSTORE_PASSWORD" || -z "$ANDROID_KEY_PASSWORD" ]]; then
+            echo "Release requested, but one or more signing secrets are absent; skipping release signing."
+            exit 0
+          fi
+          KEYSTORE_PATH="$RUNNER_TEMP/muse-number-five-release.jks"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$KEYSTORE_PATH"
+          export ANDROID_KEYSTORE_PATH="$KEYSTORE_PATH"
+          ./gradlew --no-daemon :app:assembleRelease
+
+      - name: Upload release APK
+        if: github.event_name == 'workflow_dispatch' && inputs.build_release == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: muse-number-five-release
+          path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: ignore
+          retention-days: 14

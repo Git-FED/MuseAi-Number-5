@@ -1,0 +1,47 @@
+name: Deploy to Cloudflare (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Choose the Cloudflare hosting target
+        required: true
+        type: choice
+        default: pages
+        options:
+          - pages
+          - worker
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build site-only output
+        run: python3 scripts/build_site.py
+      - name: Deploy to Cloudflare Pages
+        if: ${{ inputs.target == 'pages' }}
+        env:
+          CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT }}
+        run: |
+          : "${CF_PAGES_PROJECT:=museai-number-five}"
+          npm exec --yes --package=wrangler@4 -- wrangler pages deploy dist --project-name "$CF_PAGES_PROJECT"
+      - name: Deploy to Cloudflare Workers static assets
+        if: ${{ inputs.target == 'worker' }}
+        run: npm exec --yes --package=wrangler@4 -- wrangler deploy
