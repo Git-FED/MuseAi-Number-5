@@ -1,14 +1,20 @@
 # MuseAi-Number-5
 
+<img width="1280" height="696" alt="Screenshot 2026-10-26 124932" src="https://github.com/user-attachments/assets/c40ca90f-4987-41e2-9de6-51cc7ee30eea" />
+
 An Android/Kotlin starter app with five numbered WebView slots and a separate Group tab—currently local placeholders, not connected AI agents.
 
 **Status:** Debug build checked locally · No release APK · No verified live demo URL · D1 still open
+
+<img width="1282" height="700" alt="Screenshot 2026-10-23 112703" src="https://github.com/user-attachments/assets/e120250b-f41c-4317-b22b-5c89356c9f04" />
 
 ## Why this exists
 
 If you use several browser-based AI assistants, it is easy to lose track of which workspace you are in. MuseAi-Number-5 explores a single Android shell with five visible slots and a sixth tab for Group.
 
 The project is intentionally candid about what is missing. Muse is the only named slot. Slots 2–5 are unassigned. The app opens a local placeholder in each slot; it does not connect to AI providers. Group is a disconnected UI scaffold, and sending is disabled. Separate tabs are not proof of secure storage isolation.
+
+<img width="1279" height="703" alt="Screenshot 2026-10-26 124950" src="https://github.com/user-attachments/assets/419969a3-e876-4e23-9c1b-302a28ed8080" />
 
 ## See it work
 
@@ -17,6 +23,8 @@ The project is intentionally candid about what is missing. Muse is the only name
 **Demo GIF/video:** Unavailable. No Android emulator or device was connected for a real app recording.
 
 The fastest real trial is to build and install the debug app on an Android device or emulator. It opens the local tab shell described above. See the [slot placeholder used by the app](app/src/main/assets/slot-placeholder.html) and the [sample manual walkthrough](testing/muse-number-five.flow.json); that walkthrough is marked **NOT RUN** and D11 remains an open release gate.
+
+<img width="1285" height="697" alt="Screenshot 2026-10-26 125014" src="https://github.com/user-attachments/assets/2211e512-e220-431a-9590-b18148eda55d" />
 
 ## Quick start
 
@@ -34,6 +42,8 @@ adb shell monkey -p com.fedos.musenumberfive.debug 1
 ```
 
 On Windows, replace `./gradlew` with `gradlew.bat`. The APK is a debug artifact, not a release build. No Android unit or instrumentation test suite is included yet. The JSON files under [`testing/`](testing/) are proposed manual scenarios, not executable test evidence; the Group scenario is read-only and never sends a message.
+
+<img width="1283" height="698" alt="Screenshot 2026-10-26 125004" src="https://github.com/user-attachments/assets/83432f64-1978-4dd5-a8ab-c5720e9d670e" />
 
 ## Screenshots
 
